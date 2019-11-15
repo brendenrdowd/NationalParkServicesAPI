@@ -13,8 +13,8 @@ function formatParams(params) {
 function getParks(query, maxResults = 10) {
     const params = {
         api_key: api_key,
-        q: query,
-        limit: maxResults
+        limit: maxResults,
+        stateCode:query
     }
     const queryString = formatParams(params);
     const url = searchURL + queryString;
